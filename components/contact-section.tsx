@@ -13,8 +13,8 @@ export function ContactSection() {
     {
       icon: <Mail className="h-5 w-5" />,
       label: "Email",
-      value: "suryateja3303@gmail.com",
-      href: "mailto:suryateja3303@gmail.com",
+      value: "suryateja6220@gmail.com",
+      href: "mailto:suryateja6220@gmail.com",
     },
     {
       icon: <Phone className="h-5 w-5" />,
@@ -96,7 +96,7 @@ export function ContactSection() {
                 </div>
                 <div className="mt-6">
                   <Button className="w-full" asChild>
-                    <a href="mailto:suryateja3303@gmail.com">
+                    <a href="mailto:suryateja6220@gmail.com">
                       <Mail className="mr-2 h-4 w-4" />
                       Send Email
                     </a>

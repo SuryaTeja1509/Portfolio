@@ -4,7 +4,13 @@ export function SkillsSection() {
   const skills = [
     {
       name: "Python",
-      icon: "🐍",
+      icon: "🇵🇾",
+      description: "Data analysis, machine learning, and automation",
+      color: "from-blue-500 to-cyan-500",
+    },
+    {
+      name: "SQL",
+      icon: "🛢",
       description: "Data analysis, machine learning, and automation",
       color: "from-blue-500 to-cyan-500",
     },
@@ -22,7 +28,7 @@ export function SkillsSection() {
     },
     {
       name: "Excel",
-      icon: "⚡",
+      icon: "𝄜",
       description: "Advanced data manipulation and analysis",
       color: "from-orange-500 to-yellow-500",
     },
