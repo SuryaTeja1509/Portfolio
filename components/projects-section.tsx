@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Eye, Camera, Shield } from "lucide-react"
+import { Eye, Camera, Shield, Github } from "lucide-react"
 
 export function ProjectsSection() {
   const projects = [
@@ -9,6 +9,7 @@ export function ProjectsSection() {
       description: "Customizable Power BI template that provides interactive insights into insurance claims, risk levels, policy performance, customer demographics, and financial metrics to support data-driven decision-making.",
       tech: ["Power BI", "Excel"],
       icon: <Eye className="h-6 w-6" />,
+      github: "https://github.com/SuryaTeja1509/Insurance_Claims_And_Risks_Analysis_Dashboard",
     },
     {
       title: "LED Distance Indicator",
@@ -42,11 +43,22 @@ export function ProjectsSection() {
               className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white/90 backdrop-blur-sm border-slate-200/60 hover:border-primary/20"
             >
               <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 bg-primary/10 rounded-lg text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                    {project.icon}
+                <div className="flex items-center justify-between gap-3 mb-2">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-primary/10 rounded-lg text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                      {project.icon}
+                    </div>
+                    <CardTitle className="text-lg text-card-foreground">{project.title}</CardTitle>
                   </div>
-                  <CardTitle className="text-lg text-card-foreground">{project.title}</CardTitle>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-slate-100 rounded-lg text-slate-700 hover:bg-slate-800 hover:text-white transition-colors duration-300"
+                    title="View on GitHub"
+                  >
+                    <Github className="h-5 w-5" />
+                  </a>
                 </div>
               </CardHeader>
               <CardContent>
