@@ -5,9 +5,9 @@ import { Eye, Camera, Shield } from "lucide-react"
 export function ProjectsSection() {
   const projects = [
     {
-      title: "Face Detection using OpenCV",
-      description: "Real-time face detection system using Haar Cascades and DNN models.",
-      tech: ["Python", "OpenCV"],
+      title: "Insurance Claims and Risks Analysis Dashboard",
+      description: "Customizable Power BI template that provides interactive insights into insurance claims, risk levels, policy performance, customer demographics, and financial metrics to support data-driven decision-making.",
+      tech: ["Power BI", "Excel"],
       icon: <Eye className="h-6 w-6" />,
     },
     {
