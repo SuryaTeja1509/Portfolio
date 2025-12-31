@@ -45,9 +45,9 @@ export function SkillsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-3 gap-6 place-items-center">
           {skills.map((skill, index) => (
-            <Card key={index} className="group skill-card-hover card-gradient border-0 relative overflow-hidden">
+            <Card key={index} className="group skill-card-hover card-gradient border-0 relative overflow-hidden w-full">
               <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${skill.color}`}></div>
               <CardContent className="p-6 text-center">
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">

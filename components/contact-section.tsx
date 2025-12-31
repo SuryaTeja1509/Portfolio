@@ -33,7 +33,7 @@ export function ContactSection() {
     {
       icon: <Linkedin className="h-5 w-5" />,
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/surya-teja-reddy-363209278",
+      href: "https://www.linkedin.com/in/g-surya-teja/",
     },
   ]
 

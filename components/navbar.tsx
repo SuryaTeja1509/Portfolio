@@ -55,7 +55,7 @@ export function Navbar() {
               </Button>
               <Button variant="ghost" size="sm" asChild>
                 <a
-                  href="https://www.linkedin.com/in/surya-teja-reddy-363209278"
+                  href="https://www.linkedin.com/in/g-surya-teja/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn Profile"
@@ -100,7 +100,7 @@ export function Navbar() {
                 </Button>
                 <Button variant="ghost" size="sm" asChild>
                   <a
-                    href="https://www.linkedin.com/in/surya-teja-reddy-363209278"
+                    href="www.linkedin.com/in/g-surya-teja"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn Profile"
