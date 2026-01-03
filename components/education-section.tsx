@@ -1,43 +1,72 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { GraduationCap, Calendar } from "lucide-react"
+"use client"
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Calendar, GraduationCap } from "lucide-react"
+import { motion } from "framer-motion"
 
 export function EducationSection() {
+  const education = [
+    {
+      school: "Sri Indu College of Engineering & Technology",
+      degree: "B.Tech in Artificial Intelligence & Data Science",
+      year: "2023 - 2026",
+    },
+    {
+      school: "TRR College of Engineering and Technology",
+      degree: "Diploma",
+      year: "2020 - 2023",
+    },
+    {
+      school: "Sri Krishnaveni Talent School",
+      degree: "High School",
+      year: "2019 - 2020",
+    },
+  ]
+
   return (
-    <section id="education" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="education" className="py-24 px-4 sm:px-6 lg:px-8 bg-secondary/10">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Education</h2>
-          <div className="w-20 h-1 bg-secondary mx-auto"></div>
+        <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Education Journey</h2>
+            <div className="w-20 h-1.5 bg-primary mx-auto rounded-full"></div>
+          </motion.div>
         </div>
 
-        <Card className="bg-card border-border">
-          <CardContent className="p-8">
-            <div className="flex flex-col md:flex-row items-start gap-6">
-              <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
-                  <GraduationCap className="h-8 w-8 text-primary-foreground" />
-                </div>
-              </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold text-card-foreground mb-2">
-                  B.Tech in Artificial Intelligence and Data Science
-                </h3>
-                <h4 className="text-lg font-semibold text-primary mb-3">
-                  Sri Indu College of Engineering and Technology
-                </h4>
-                <div className="flex items-center text-muted-foreground mb-4">
-                  <Calendar className="h-4 w-4 mr-2" />
-                  <span>Aug 2023 – Aug 2026</span>
-                </div>
-                <p className="text-card-foreground leading-relaxed">
-                  Currently pursuing a comprehensive degree program focused on artificial intelligence, machine
-                  learning, data science, and their practical applications. Gaining hands-on experience with modern AI
-                  technologies and data analysis techniques.
-                </p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+        <div className="relative border-l-2 border-primary/20 ml-3 md:ml-6 space-y-12">
+          {education.map((edu, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2 }}
+              className="relative pl-8 md:pl-12"
+            >
+              <div className="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-primary ring-4 ring-background" />
+
+              <Card className="border-border/50 hover:shadow-md transition-all">
+                <CardHeader>
+                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+                    <h3 className="text-xl font-bold text-primary">{edu.school}</h3>
+                    <Badge variant="outline" className="w-fit flex items-center gap-1">
+                      <Calendar className="h-3 w-3" /> {edu.year}
+                    </Badge>
+                  </div>
+                  <CardTitle className="text-lg font-medium text-foreground flex items-center gap-2">
+                    <GraduationCap className="h-5 w-5 text-muted-foreground" />
+                    {edu.degree}
+                  </CardTitle>
+                </CardHeader>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   )

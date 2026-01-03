@@ -10,27 +10,15 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Navbar />
       <HeroSection />
-      <div className="gradient-bg-1">
-        <AboutSection />
-      </div>
-      <div className="gradient-bg-2">
-        <SkillsSection />
-      </div>
-      <div className="gradient-bg-3">
-        <EducationSection />
-      </div>
-      <div className="gradient-bg-4">
-        <ProjectsSection />
-      </div>
-      <div className="gradient-bg-5">
-        <AwardsSection />
-      </div>
-      <div className="gradient-bg-1">
-        <ContactSection />
-      </div>
+      <AboutSection />
+      <SkillsSection />
+      <EducationSection />
+      <ProjectsSection />
+      <AwardsSection />
+      <ContactSection />
       <Footer />
     </main>
   )

@@ -1,41 +1,57 @@
-import { Card, CardContent } from "@/components/ui/card"
+"use client"
+
+import { motion } from "framer-motion"
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">About Me</h2>
-          <div className="w-20 h-1 bg-secondary mx-auto"></div>
+        <div className="text-center mb-16">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl sm:text-4xl font-bold mb-4"
+          >
+            About Me
+          </motion.h2>
+          <div className="w-20 h-1.5 bg-primary mx-auto rounded-full"></div>
         </div>
 
-        <Card className="bg-card border-border">
-          <CardContent className="p-8">
-            <div className="flex flex-col lg:flex-row items-center gap-8">
-              <div className="flex-shrink-0">
-                <div className="w-48 h-48 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
-                  <span className="text-6xl text-white">ST</span>
-                </div>
-              </div>
-              <div className="flex-1 text-center lg:text-left">
-                <p className="text-lg leading-relaxed text-card-foreground">
-                  An individual with a keen interest in Software programs, possessing good interpersonal and analytical
-                  skills, who wishes to use technical knowledge catering to the needs of the company.
-                </p>
-                <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <h3 className="font-semibold text-primary mb-2">Location</h3>
-                    <p className="text-muted-foreground">Hyderabad, Telangana</p>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-primary mb-2">Focus Areas</h3>
-                    <p className="text-muted-foreground">AI, Data Science, Analytics</p>
-                  </div>
-                </div>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            <div className="relative">
+              <div className="absolute inset-0 bg-primary/20 translate-x-4 translate-y-4 rounded-2xl -z-10"></div>
+              <div className="aspect-square bg-muted rounded-2xl overflow-hidden flex items-center justify-center border border-border">
+                {/* Placeholder for Headshot */}
+                <span className="text-4xl">👨‍💻</span>
               </div>
             </div>
-          </CardContent>
-        </Card>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+            className="space-y-6 text-lg text-muted-foreground leading-relaxed"
+          >
+            <p>
+              I am a motivated <span className="font-semibold text-foreground">B.Tech student in Artificial Intelligence and Data Science</span> with a strong passion for uncovering insights from data and building intelligent solutions.
+            </p>
+            <p>
+              My journey involves hands-on experience with tools like <span className="text-foreground">Power BI, SQL, Python, and Tableau</span>. I enjoy turning complex datasets into actionable visualizations.
+            </p>
+            <p>
+              Beyond data, I explore <span className="text-foreground">Machine Learning</span> and <span className="text-foreground">Big Data Analytics</span>, always eager to learn new technologies and apply them to solve real-world problems.
+            </p>
+          </motion.div>
+        </div>
       </div>
     </section>
   )
