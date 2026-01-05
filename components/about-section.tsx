@@ -1,6 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
+import profilePic from "../lib/profile.jpeg"
 
 export function AboutSection() {
   return (
@@ -25,11 +27,16 @@ export function AboutSection() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <div className="relative">
+            <div className="relative max-w-xs mx-auto">
               <div className="absolute inset-0 bg-primary/20 translate-x-4 translate-y-4 rounded-2xl -z-10"></div>
-              <div className="aspect-square bg-muted rounded-2xl overflow-hidden flex items-center justify-center border border-border">
-                {/* Placeholder for Headshot */}
-                <span className="text-4xl">👨‍💻</span>
+              <div className="aspect-square bg-muted rounded-2xl overflow-hidden relative border border-border">
+                <Image
+                  src={profilePic}
+                  alt="Profile picture"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 600px) 100vw, 50vw"
+                />
               </div>
             </div>
           </motion.div>

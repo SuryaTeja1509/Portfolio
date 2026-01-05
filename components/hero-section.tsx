@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Download, ExternalLink, ArrowRight, Database, Binary, LineChart, Network, Brain, Server, Search, Cpu, Share2, BrainCircuit } from "lucide-react"
+import { Download, ExternalLink, ArrowRight, Database, Binary, LineChart, Network, Brain, Server, Search, Cpu, Share2, BrainCircuit, Eye } from "lucide-react"
 import { motion } from "framer-motion"
 
 export function HeroSection() {
@@ -47,8 +47,15 @@ export function HeroSection() {
             <Button size="lg" onClick={scrollToProjects} className="rounded-full shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all">
               View Projects <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full border-2 hover:bg-secondary/10">
-              <Download className="mr-2 h-4 w-4" /> Resume
+            <Button size="lg" variant="outline" className="rounded-full border-2 hover:bg-secondary/10" asChild>
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                <Eye className="mr-2 h-4 w-4" /> View Resume
+              </a>
+            </Button>
+            <Button size="lg" variant="outline" className="rounded-full border-2 hover:bg-secondary/10" asChild>
+              <a href="/resume.pdf" download="Surya_Teja_Resume.pdf">
+                <Download className="mr-2 h-4 w-4" /> Download Resume
+              </a>
             </Button>
           </div>
         </motion.div>
