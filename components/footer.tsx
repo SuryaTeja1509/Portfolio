@@ -6,8 +6,8 @@ export function Footer() {
           © {new Date().getFullYear()} Surya Teja Reddy. All rights reserved.
         </p>
         <div className="flex gap-4 text-sm text-muted-foreground">
-          <span className="hover:text-primary transition-colors cursor-pointer">Privacy</span>
-          <span className="hover:text-primary transition-colors cursor-pointer">Terms</span>
+          {/* <span className="hover:text-primary transition-colors cursor-pointer">Privacy</span>
+          <span className="hover:text-primary transition-colors cursor-pointer">Terms</span> */}
         </div>
       </div>
     </footer>
