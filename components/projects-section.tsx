@@ -17,17 +17,21 @@ export function ProjectsSection() {
       color: "bg-blue-50 text-blue-700 dark:bg-blue-900/20 dark:text-blue-300"
     },
     {
-      title: "LED Distance Indicator",
-      description: "Arduino-based distance measurement system utilizing ultrasonic sensors and LED arrays for visual feedback.",
-      tech: ["Arduino", "C++", "Electronics"],
+      title: "Bank-Loan-Analysis-Using-Excel",
+      description: "This project represents a complete, end-to-end Data Analytics workflow built using financial business data. It demonstrates how raw transactional data can be transformed into structured insights and interactive dashboards for strategic decision-making.",
+      tech: ["Excel","Pivot Tables"],
       icon: <Camera className="h-5 w-5" />,
+      github: "https://github.com/SuryaTeja1509/Bank-Loan-Analysis-Using-Excel",
+
       color: "bg-green-50 text-green-700 dark:bg-green-900/20 dark:text-green-300"
     },
     {
-      title: "Smart Safety Helmet",
-      description: "IoT-enabled helmet featuring drowsiness detection, alcohol sensing, and emergency alert systems for rider safety.",
-      tech: ["IoT", "Python", "Sensors"],
+      title: "Customer-Shopping-Behavior-Analysis",
+      description: "A comprehensive data analysis and visualization project examining customer shopping patterns, demographics, and purchasing behavior using Python data processing and Power BI interactive dashboards.",
+      tech: ["Python", "Power BI","SQL", "Pandas", "Matplotlib","Seaborn","NumPy"],
       icon: <Shield className="h-5 w-5" />,
+      github: "https://github.com/SuryaTeja1509/Customer-Shopping-Behavior-Analysis",
+
       color: "bg-orange-50 text-orange-700 dark:bg-orange-900/20 dark:text-orange-300"
     },
   ]
